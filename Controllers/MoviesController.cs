@@ -20,7 +20,7 @@ namespace MoviesWebApi.Controllers
             this.map = map;
         }
 
-        [HttpGet]
+        [HttpGet("get-all-movies")]
         public async Task<IActionResult> GetAllMovies()
         {
             try

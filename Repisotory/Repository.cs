@@ -9,6 +9,11 @@ namespace MoviesWebApi.Repisotory
     {
         private readonly MovieDbContext _dbContext;
 
+        public Repository(MovieDbContext dbcontext)
+        {
+            _dbContext = dbcontext;
+        }
+
         public async Task<T> AddAsync(T entity, CancellationToken token)
         {
             await _dbContext.AddAsync<T>(entity, token);
